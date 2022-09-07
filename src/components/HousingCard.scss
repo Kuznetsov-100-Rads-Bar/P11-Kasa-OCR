@@ -1,0 +1,15 @@
+.housing-card {
+  height: 255px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.housing-title {
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  right: 20px;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
