@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import About from './pages/About';
+import data from './data.json';
 
 export default function AppRouter() {
     const [currentLocation, setCurrentLocation] = useState('');
@@ -13,7 +14,7 @@ export default function AppRouter() {
             <div className="page-wrapper">
                 <Navbar currentLocation={currentLocation} />
                 <Routes>
-                    <Route exact path='/' element={<Home setCurrentLocation={setCurrentLocation} />} />
+                    <Route exact path='/' element={<Home housings={data} setCurrentLocation={setCurrentLocation} />} />
                     <Route exact path='/about' element={<About setCurrentLocation={setCurrentLocation} />} />
                 </Routes>
                 <Footer />

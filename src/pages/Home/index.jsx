@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import "./style.scss";
 
-import housings from "../../logements.json";
 import HousingCard from '../../components/HousingCard';
 
-export default function Home({ setCurrentLocation }) {
+export default function Home({ housings, setCurrentLocation }) {
 
   useEffect(() => {
     setCurrentLocation('homepage');
