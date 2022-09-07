@@ -1,0 +1,32 @@
+.not-found {
+  margin: 30px;
+  &-title {
+    color: #ff6060;
+    margin: 0;
+    text-align: center;
+    font-size: 6rem;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 18rem;
+    }
+  }
+  &-description {
+    color: #ff6060;
+    text-align: center;
+    font-size: 1.125rem;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 2.25rem;
+    }
+  }
+  &-link {
+    color: #ff6060;
+    text-align: center;
+    display: block;
+    margin: 100px 0 0 0;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 1.125rem;
+    }
+  }
+}

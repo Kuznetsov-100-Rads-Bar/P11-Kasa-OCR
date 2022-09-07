@@ -1,11 +1,6 @@
 // 41Ea4B9ajF7dnAdksUdXr24HjonuVHUph9w1FpcEZg99
 .collapse {
   margin: 0 20px;
-  max-width: 1024px;
-
-  @media screen and (min-width: 1064px) {
-    margin: 0 auto;
-  }
   &-header {
     display: flex;
     justify-content: space-between;
@@ -16,9 +11,9 @@
       color: white;
       margin: 0;
       font-size: 16px;
-        @media screen and (min-width: 1024px) {
-            font-size: 28px;
-        }
+      @media screen and (min-width: 1024px) {
+        font-size: 28px;
+      }
     }
     &-icon {
       transition: transform 0.2s ease-in-out;
@@ -49,13 +44,12 @@
       }
     }
     &-text {
-        margin: 0;
-        color: #ff6060;
-        font-size: 13px;
-        padding: 16px;
-        @media screen and (min-width: 1024px) {
-            font-size: 24px;
-        }
+      margin: 0;
+      color: #ff6060;
+      padding: 16px;
+      @media screen and (min-width: 1024px) {
+        font-size: 24px;
+      }
     }
   }
 }

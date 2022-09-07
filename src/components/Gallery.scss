@@ -1,0 +1,40 @@
+.gallery {
+  background-size: cover;
+  background-position: center;
+  height: 255px;
+  margin: 30px 20px;
+  border-radius: 10px;
+  position: relative;
+  &-count {
+    display: none;
+    @media screen and (min-width: 1024px) {
+      font-size: 1.125rem;
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.3);
+    }
+  }
+  &-arrow {
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+
+    @media screen and (min-width: 1024px) {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .left {
+    left: 20px;
+  }
+  .right {
+    right: 20px;
+  }
+}
