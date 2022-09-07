@@ -18,7 +18,7 @@ export default function HousingCard({ data: { id, cover, title } }) {
         objectPosition: "center",
       }}
     >
-      <h2 className="housing-title">{title}</h2>
+      <h2 className="housing-card-title">{title}</h2>
     </Link>
   );
 }

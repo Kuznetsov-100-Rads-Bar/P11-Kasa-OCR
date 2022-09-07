@@ -1,6 +1,6 @@
 // 41Ea4B9ajF7dnAdksUdXr24HjonuVHUph9w1FpcEZg99
 .collapse {
-  margin: 0 20px;
+  width: 100%;
   &-header {
     display: flex;
     justify-content: space-between;
@@ -12,7 +12,7 @@
       margin: 0;
       font-size: 16px;
       @media screen and (min-width: 1024px) {
-        font-size: 28px;
+        font-size: 18px;
       }
     }
     &-icon {
@@ -48,7 +48,7 @@
       color: #ff6060;
       padding: 16px;
       @media screen and (min-width: 1024px) {
-        font-size: 24px;
+        font-size: 18px;
       }
     }
   }
