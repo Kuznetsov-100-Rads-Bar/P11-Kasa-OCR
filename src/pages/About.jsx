@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Collapse from "../components/Collapse/Collapse.component";
 import "./About.scss";
-import Image from "../assets/images/a-propos.png";
 
 export default function About({ setCurrentLocation }) {
   const aboutCollapseContent = [

@@ -36,13 +36,13 @@ export default function Gallery({ pictures }) {
           <img
             className="gallery-arrow left"
             src={ArrowLeft}
-            alt="Image précédente"
+            alt="Diaporama précédent"
             onClick={() => handlePicture("previous")}
           />
           <img
             className="gallery-arrow right"
             src={ArrowRight}
-            alt="Image suivante"
+            alt="Diaporama suivant"
             onClick={() => handlePicture("next")}
           />
         </>
