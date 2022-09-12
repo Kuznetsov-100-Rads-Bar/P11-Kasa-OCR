@@ -5,16 +5,15 @@ import Gallery from "../components/Gallery";
 import Tag from "../components/Tag";
 import { ReactComponent as StarIcon } from "../assets/icons/star.svg";
 import "./Housing.scss";
-import NotFound from "./NotFound";
 
 export default function Housing({ housings }) {
   const { id } = useParams();
   // le logement est chercher dans la liste
   const selectedHousing = housings.find((housing) => housing.id === id);
   // console.log(housings);
-// Si le logement n'est pas trouvé, l'utilisateur est renvoyé sur la page d'accueil
+  // Si le logement n'est pas trouvé, l'utilisateur est renvoyé sur la page d'accueil
   if (!selectedHousing) {
-    return <Navigate replace={<NotFound />} />;
+    return <Navigate to="/404" />;
   }
 
   return (

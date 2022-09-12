@@ -9,10 +9,12 @@
     color: #ff6060;
   }
   &-header {
-    margin: 20px;
+    width: 90%;
+    margin: 20px auto;
   }
   &-body {
-    margin: 30px 20px;
+    width: 90%;
+    margin: 30px auto;
   }
   &-wrapper {
     @media screen and (min-width: 1024px) {

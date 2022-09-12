@@ -29,6 +29,7 @@ export default function AppRouter() {
             }
           />
           {/* l'étoile ça prend toutes les pages qui n'existe pas */}
+          <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
