@@ -26,10 +26,10 @@ export default function Collapse({ type, title, content }) {
     }
 
     return (
-        <div className={`collapse ${isActive ? 'collapse-active' : null}`}>
-            <div className="collapse-header">
+        <div        className={`collapse ${isActive ? 'collapse-active' : null}`}>
+            <div onClick={() => setIsActive(!isActive)} className="collapse-header">
                 <p className="collapse-header-title">{title}</p>
-                <img onClick={() => setIsActive(!isActive)} src={carretIcon} alt="collapse icon" className="collapse-header-icon" />
+                <img src={carretIcon} alt="collapse icon" className="collapse-header-icon" />
             </div>
             <div className='collapse-content'>
                 {type === 'list' ?

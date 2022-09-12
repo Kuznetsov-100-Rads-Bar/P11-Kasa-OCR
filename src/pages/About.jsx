@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Collapse from "../components/Collapse/Collapse.component";
+import Collapse2 from "../components/Collapse/MyComp"; 
 import "./About.scss";
 
 export default function About({ setCurrentLocation }) {
@@ -38,6 +39,13 @@ export default function About({ setCurrentLocation }) {
     <div>
       <div className="about-image" />
       <div className="collapses">
+      {/* <Collapse2 title="test" content={<p>My content</p>}/> */}
+      <Collapse2 title="test list">
+        <ul>
+          <li>1</li>
+          <li>2</li>
+        </ul>
+      </Collapse2>
         {aboutCollapseContent.map((element, key) => {
           return (
             <Collapse

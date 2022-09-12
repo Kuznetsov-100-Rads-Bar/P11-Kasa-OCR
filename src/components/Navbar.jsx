@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useLocation  } from "react-router-dom";
 
 import Logo from "../assets/images/logo.png"
 
 import "./Navbar.scss";
 
 export default function Navbar({ currentLocation }) {
+    const location = useLocation()
+    console.log(location)
     return (
         <nav className='navbar'>
             <img src={Logo} alt="Logo de Kasa" className='logo' />
