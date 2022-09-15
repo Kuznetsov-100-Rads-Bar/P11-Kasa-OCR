@@ -29,7 +29,7 @@ export default function Gallery({ pictures }) {
   return (
     <div
       className="gallery"
-      style={{ backgroundImage: `url(${pictures[currentIndex]})` }}
+      style={{ backgroundImage: `url(${pictures[currentIndex]})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
     >
       {pictures.length > 1 ? (
         <>
@@ -45,11 +45,11 @@ export default function Gallery({ pictures }) {
             alt="Diaporama suivant"
             onClick={() => handlePicture("next")}
           />
+          <p className="gallery-count">
+            {currentIndex + 1}/{pictures.length}
+          </p>
         </>
       ) : null}
-      <p className="gallery-count">
-        {currentIndex + 1}/{pictures.length}
-      </p>
     </div>
   );
 }

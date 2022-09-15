@@ -14,8 +14,9 @@ export default function HousingCard({ data: { id, cover, title } }) {
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.2)
     ), url(${cover})`,
-        objectFit: "cover",
-        objectPosition: "center",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
       }}
     >
       <h2 className="housing-card-title">{title}</h2>

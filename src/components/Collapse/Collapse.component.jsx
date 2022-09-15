@@ -7,6 +7,7 @@ export default function Collapse({ type, title, content }) {
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
+        /* Checking if the type is valid, if the title is valid, if the content is valid. */
         if (!type || (!["text", "list"].includes(type))) {
             return (console.error("Collapse component must have valid type."), setError(true));
         }
@@ -21,12 +22,14 @@ export default function Collapse({ type, title, content }) {
         }
     }, [type, title, content])
 
+    /* Checking if the error is true, if it is, it will return nothing, if it is not, it will return
+    the component. */
     if (error) {
         return;
     }
 
     return (
-        <div        className={`collapse ${isActive ? 'collapse-active' : null}`}>
+        <div className={`collapse ${isActive ? 'collapse-active' : null}`}>
             <div onClick={() => setIsActive(!isActive)} className="collapse-header">
                 <p className="collapse-header-title">{title}</p>
                 <img src={carretIcon} alt="collapse icon" className="collapse-header-icon" />
