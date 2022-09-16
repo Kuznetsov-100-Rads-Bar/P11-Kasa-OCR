@@ -1,7 +1,16 @@
+/* Importation du crochet useEffect à partir de la bibliothèque React. */
 import React, { useEffect } from "react";
+/* Importation du composant Collapse à partir du fichier Collapse.component.js. */
 import Collapse from "../components/Collapse/Collapse.component";
+/* Importation de la feuille de style pour la page À propos. */
 import "./About.scss";
 
+/**
+ * C'est une fonction qui renvoie un div qui contient une div avec une classe about-image et une div avec une
+ * classe de collapses. Le div avec une classe de replis contient un composant Collapse pour chaque élément 
+ * du tableau aboutCollapseContent.
+ * @returns Le composant Collapse est renvoyé.
+ */
 export default function About({ setCurrentLocation }) {
   const aboutCollapseContent = [
     {

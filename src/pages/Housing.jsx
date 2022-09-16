@@ -1,9 +1,16 @@
+/* Importation de la bibliothèque React. */
 import React from "react";
+/* Importation des fonctions useParams et Navigate depuis la bibliothèque react-router-dom. */
 import { useParams, Navigate } from "react-router-dom";
+/* Importation du composant Collapse à partir du fichier Collapse.component.js. */
 import Collapse from "../components/Collapse/Collapse.component";
+/* Importation du composant Gallery à partir du fichier Gallery.component.js. */
 import Gallery from "../components/Gallery";
+/* Importation du composant Tag à partir du fichier Tag.component.js. */
 import Tag from "../components/Tag";
+/* Importation du fichier svg en tant que composant React. */
 import { ReactComponent as StarIcon } from "../assets/icons/star.svg";
+/* Importation du fichier CSS pour le composant. */
 import "./Housing.scss";
 
 export default function Housing({ housings }) {
@@ -34,6 +41,7 @@ export default function Housing({ housings }) {
           </div>
           <div className="housing-right">
             <ul className="housing-stars">
+              {/* Création d'une liste de 5 étoiles. */}
               {[...Array(5)].map((star, index) => {
                 index += 1;
                 return (
@@ -50,6 +58,7 @@ export default function Housing({ housings }) {
                 );
               })}
             </ul>
+            {/* Affichage du nom et de l'image de l'hôte. */}
             <div className="housing-host">
               <p className="housing-host-name">
                 {selectedHousing.host.name.split(" ")[0]}

@@ -1,13 +1,18 @@
+/* Importation de la bibliothèque React et des hooks useEffect et useState depuis la bibliothèque React. */
 import React, { useEffect, useState } from 'react'
+/* Importation de la feuille de style du composant. */
 import './Collapse.style.scss';
+/* Importation de l'icône du chariot à partir du dossier des assets. */
 import carretIcon from "../../assets/images/carret.svg";
 
 export default function Collapse({ type, title, content }) {
+/* Création d'une variable d'état appelée error et mise à false. */
     const [error, setError] = useState(false);
+/* Créer une variable d'état appelée isActive et la définir sur false. */
     const [isActive, setIsActive] = useState(false);
 
     useEffect(() => {
-        /* Checking if the type is valid, if the title is valid, if the content is valid. */
+        /* Vérifier si le type est valide, si le titre est valide, si le contenu est valide. */
         if (!type || (!["text", "list"].includes(type))) {
             return (console.error("Collapse component must have valid type."), setError(true));
         }
@@ -22,12 +27,14 @@ export default function Collapse({ type, title, content }) {
         }
     }, [type, title, content])
 
-    /* Checking if the error is true, if it is, it will return nothing, if it is not, it will return
-    the component. */
+    /* Vérifier si l'erreur est vraie, si c'est le cas, elle ne renverra rien, si ce n'est pas le cas, elle renverra
+    le composant. */
     if (error) {
         return;
     }
 
+/* Un composant React qui rend un élément réductible. */
+/* Un opérateur ternaire. */
     return (
         <div className={`collapse ${isActive ? 'collapse-active' : null}`}>
             <div onClick={() => setIsActive(!isActive)} className="collapse-header">

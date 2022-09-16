@@ -1,8 +1,16 @@
+/* Importing the useEffect hook from the React library. */
 import React, { useEffect } from 'react';
+/* Importing the style.scss file. */
 import "./style.scss";
 
+/* Importing the HousingCard component from the components folder. */
 import HousingCard from '../../components/HousingCard';
 
+/**
+ * Home est une fonction qui renvoie un div avec un en-tête et une section principale. L'en-tête contient une div
+ * avec un h1. La section principale contient une section avec une liste des composants de la HousingCard.
+ * @returns Un tableau d'objets.
+ */
 export default function Home({ housings, setCurrentLocation }) {
 
   useEffect(() => {
