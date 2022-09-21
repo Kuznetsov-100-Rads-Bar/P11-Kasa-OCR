@@ -14,7 +14,7 @@ import HousingCard from '../../components/HousingCard/HousingCard';
 export default function Home({ housings, setCurrentLocation }) {
 
   useEffect(() => {
-    /* Setting the current location to homepage. */
+    /* Définition de l'emplacement actuel sur la page d'accueil. */
     setCurrentLocation('homepage');
   }, [setCurrentLocation])
 

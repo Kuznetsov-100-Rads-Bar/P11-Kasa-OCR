@@ -40,8 +40,8 @@ export default function About({ setCurrentLocation }) {
   ];
 
   useEffect(() => {
-    /* A function that is passed as a prop to the About component. It is used to set the current
-    location of the user. */
+    /* Une Fonction transmise en tant qu'accessoire au composant About. Il est utilisé pour mettre, 
+    pour définir la location actuel de l'utilisateur. */
     setCurrentLocation("aboutpage");
   }, [setCurrentLocation]);
 
@@ -50,7 +50,9 @@ export default function About({ setCurrentLocation }) {
       <div className="about-image" />
       <div className="collapses">
         {/* <Collapse2 title="test" content={<p>My content</p>}/> */}
+        {/* Une boucle qui parcourt le tableau d'objets et renvoie un composant Collapse pour chaque objet dans le tableau. */}
         {aboutCollapseContent.map((element, key) => {
+         /* Renvoi d'un composant Collapse avec la clé des objets, le type, le titre, et le contenu. */
           return (
             <Collapse
               key={key}

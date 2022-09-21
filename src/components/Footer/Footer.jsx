@@ -9,6 +9,10 @@ import "./Footer.scss"
  * Cette fonction renvoie un élément de pied de page avec un logo et un texte de copyright.
  * @returns Un pied de page avec un logo et du texte.
  */
+/**
+ * Il renvoie un élément footer avec un logo et un texte de copyright.
+ * @returns Un footer avec un logo et un texte.
+ */
 export default function Footer() {
   return (
     <footer className="footer">

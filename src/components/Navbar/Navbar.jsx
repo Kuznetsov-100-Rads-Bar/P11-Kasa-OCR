@@ -22,8 +22,8 @@ export default function Navbar({ currentLocation }) {
           <Link
             to={"/"}
             className={`links-link ${
-              /* If the state currentLocation is defined on 'homepage'
-              (when the user is on the home page) that add the class active to the nav-link */
+              /* Si l'état currentLocation est défini sur 'homepage'
+              (lorsque l'utilisateur est sur la page d'accueil) qui ajoutent la classe active au nav-link */
               currentLocation === "homepage" ? "active" : null
             }`}
           >

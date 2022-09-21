@@ -50,6 +50,7 @@ export default function Housing({ housings }) {
                   <i key={index} className="housing-star-item">
                     <StarIcon
                       className="housing-star-icon"
+                    /* Un opérateur ternaire. C'est une manière abrégée d'écrire une instruction if/else. */
                       fill={`${index <= selectedHousing.rating
                           ? "#ff6060"
                           : "lightgray"
