@@ -1,7 +1,7 @@
 /* Importation du crochet useEffect à partir de la bibliothèque React. */
 import React, { useEffect } from "react";
 /* Importation du composant Collapse à partir du fichier Collapse.component.js. */
-import Collapse from "../components/Collapse/Collapse.component";
+import Collapse from "../../components/Collapse/Collapse.component";
 /* Importation de la feuille de style pour la page À propos. */
 import "./About.scss";
 
@@ -44,7 +44,7 @@ export default function About({ setCurrentLocation }) {
   }, [setCurrentLocation]);
 
   return (
-    <div>
+    <div className="container">
       <div className="about-image" />
       <div className="collapses">
         {/* <Collapse2 title="test" content={<p>My content</p>}/> */}

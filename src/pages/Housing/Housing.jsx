@@ -3,13 +3,13 @@ import React from "react";
 /* Importation des fonctions useParams et Navigate depuis la bibliothèque react-router-dom. */
 import { useParams, Navigate } from "react-router-dom";
 /* Importation du composant Collapse à partir du fichier Collapse.component.js. */
-import Collapse from "../components/Collapse/Collapse.component";
+import Collapse from "../../components/Collapse/Collapse.component";
 /* Importation du composant Gallery à partir du fichier Gallery.component.js. */
-import Gallery from "../components/Gallery";
+import Gallery from "../../components/Gallery/Gallery";
 /* Importation du composant Tag à partir du fichier Tag.component.js. */
-import Tag from "../components/Tag";
+import Tag from "../../components/Tag/Tag";
 /* Importation du fichier svg en tant que composant React. */
-import { ReactComponent as StarIcon } from "../assets/icons/star.svg";
+import { ReactComponent as StarIcon } from "../../assets/icons/star.svg";
 /* Importation du fichier CSS pour le composant. */
 import "./Housing.scss";
 
@@ -19,12 +19,14 @@ export default function Housing({ housings }) {
   const selectedHousing = housings.find((housing) => housing.id === id);
   // console.log(housings);
   // Si le logement n'est pas trouvé, l'utilisateur est renvoyé sur la page d'accueil
-  if (!selectedHousing) {
+  if (!selectedHousing && housings.length > 0) {
     return <Navigate to="/404" />;
   }
 
-  return (
-    <div>
+  return selectedHousing === undefined ? (
+    <div className="container">Loading...</div>
+  ) : (
+    <div className="container">
       <div className="housing-header">
         <Gallery pictures={selectedHousing.pictures} />
       </div>
@@ -48,11 +50,10 @@ export default function Housing({ housings }) {
                   <i key={index} className="housing-star-item">
                     <StarIcon
                       className="housing-star-icon"
-                      fill={`${
-                        index <= selectedHousing.rating
+                      fill={`${index <= selectedHousing.rating
                           ? "#ff6060"
                           : "lightgray"
-                      }`}
+                        }`}
                     />
                   </i>
                 );

@@ -4,7 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 /* Importation de l'image du logo. */
-import Logo from "../assets/images/logo.png";
+import Logo from "../../assets/images/logo.png";
 
 /* Importation de la feuille de style pour le composant Navbar. */
 import "./Navbar.scss";

@@ -1,7 +1,7 @@
 /* Importation de la bibliothèque React. */
 import React from 'react'
 /* Importation du fichier image à partir du dossier assets. */
-import logoKasa from "../assets/images/footer-logo.png"
+import logoKasa from "../../assets/images/footer-logo.png"
 /* Importation de la feuille de style du composant. */
 import "./Footer.scss"
 

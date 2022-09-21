@@ -3,7 +3,7 @@ import React from "react";
 /* Importation du composant Link depuis la bibliothèque react-router-dom. */
 import { Link } from "react-router-dom";
 /* Importation de la feuille de style du composant. */
-import "./NotFound.scss";
+import "../NotFound/NotFound";
 
 /**
  * La fonction NotFound renvoie un div avec un titre, une description et un lien.

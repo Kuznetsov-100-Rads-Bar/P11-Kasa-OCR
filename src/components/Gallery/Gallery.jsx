@@ -1,9 +1,9 @@
 /* Importation de la bibliothèque React et du hook useState depuis la bibliothèque React. */
 import React, { useState } from "react";
 /* Importation du fichier arrow-left.svg depuis le dossier assets/icons. */
-import ArrowRight from "../assets/icons/arrow-left.svg";
+import ArrowRight from "../../assets/icons/arrow-left.svg";
 /* Importation du fichier arrow-left.svg depuis le dossier assets/icons. */
-import ArrowLeft from "../assets/icons/arrow-right.svg";
+import ArrowLeft from "../../assets/icons/arrow-right.svg";
 /* Importation du fichier Gallery.scss. */
 import "./Gallery.scss";
 

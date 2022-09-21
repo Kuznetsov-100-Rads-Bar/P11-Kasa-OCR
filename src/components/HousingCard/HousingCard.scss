@@ -1,7 +1,14 @@
 .housing-card {
-  height: 255px;
+  width: 100%;
+  min-height: 255px;
   border-radius: 10px;
   position: relative;
+  @media screen and (min-width: 730px) {
+    width: 100%;
+    aspect-ratio: 1;
+    max-height: 340px;
+    max-width: 340px;
+  }
 }
 
 .housing-card-title {

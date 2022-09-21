@@ -1,10 +1,10 @@
 /* Importing the useEffect hook from the React library. */
 import React, { useEffect } from 'react';
 /* Importing the style.scss file. */
-import "./style.scss";
+import "./Home.scss";
 
 /* Importing the HousingCard component from the components folder. */
-import HousingCard from '../../components/HousingCard';
+import HousingCard from '../../components/HousingCard/HousingCard';
 
 /**
  * Home est une fonction qui renvoie un div avec un en-tête et une section principale. L'en-tête contient une div
