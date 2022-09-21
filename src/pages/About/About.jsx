@@ -40,6 +40,8 @@ export default function About({ setCurrentLocation }) {
   ];
 
   useEffect(() => {
+    /* A function that is passed as a prop to the About component. It is used to set the current
+    location of the user. */
     setCurrentLocation("aboutpage");
   }, [setCurrentLocation]);
 
