@@ -19,6 +19,7 @@ export default function Navbar({ currentLocation }) {
       <img src={Logo} alt="Logo de Kasa" className="logo" />
       <ul className="links">
         <li className="links-item">
+{/* Un lien vers la page d'accueil. */}
           <Link
             to={"/"}
             className={`links-link ${
@@ -31,9 +32,12 @@ export default function Navbar({ currentLocation }) {
           </Link>
         </li>
         <li className="links-item">
+         {/* Un lien vers la page à propos. */}
           <Link
             to={"/about"}
             className={`links-link ${
+              /* Si l'état currentLocation est défini sur 'aboutpage'
+              (lorsque l'utilisateur est sur la page à propos) qui ajoutent la classe active au nav-link */
               currentLocation === "aboutpage" ? "active" : null
             }`}
           >

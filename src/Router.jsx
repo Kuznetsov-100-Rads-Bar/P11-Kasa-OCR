@@ -13,16 +13,17 @@ import Footer from "./components/Footer/Footer";
 /* Importation du composant À propos du dossier pages. */
 import About from "./pages/About/About";
 /* Importation du fichier data.json dans le fichier AppRouter.js. */
-// import data from "./data.json";
 /* Importation du composant Logement à partir du dossier pages. */
 import Housing from "./pages/Housing/Housing";
 
 export default function AppRouter() {
-  /* A hook that allows us to use state in a functional component. */
+  /* Un hook qui nous permet d'utiliser l'état dans un composant fonctionnel. */
   const [currentLocation, setCurrentLocation] = useState("");
   const [data, setData] = useState([]);
 
+/* Il récupère les données du fichier json. */
   useEffect(() => {
+    /* It's fetching data from the json file. */
     fetch("/data.json")
       .then((resp) => resp.json())
       .then((result) => {
@@ -36,10 +37,12 @@ export default function AppRouter() {
       <div className="page-wrapper">
         <Routes>
           <Route path="/logement/:id" element={<Housing housings={data} />} />
+{/* Un itinéraire qui sera affiché lorsque l'utilisateur sera sur la page /about page. */}
           <Route
             path="/about"
             element={<About setCurrentLocation={setCurrentLocation} />}
           />
+{/* Un itinéraire qui sera affiché lorsque l'utilisateur sera sur la page principal /. */}
           <Route
             exact
             path="/"
