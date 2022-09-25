@@ -23,7 +23,9 @@ export default function AppRouter() {
 
 /* Il récupère les données du fichier json. */
   useEffect(() => {
-    /* It's fetching data from the json file. */
+    /* useEffect : 
+    - si simplement un [] = le code s'exécute une seule fois au chargement de la page
+    - si un [data] (si tu met à jour tes data par exemple]) = le s'exécute a chaque fois que la variable data est mis à jour. */
     fetch("/data.json")
       .then((resp) => resp.json())
       .then((result) => {
